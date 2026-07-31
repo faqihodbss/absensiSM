@@ -55,6 +55,7 @@
                             <option value="Weekly Accountability HO">Weekly Accountability HO</option>
                             <option value="Briefing Internal">Briefing Internal</option>
                             <option value="Sosialisasi APP Improvement">Sosialisasi APP Improvement</option>
+                            <option value="Sosialisasi Deployment S2 2026">Sosialisasi Deployment S2 2026</option>
                         </select>
                     </div>
                 </div>
@@ -157,6 +158,7 @@
                         <option value="Weekly Accountability HO">Weekly Accountability HO</option>
                         <option value="Briefing Internal">Briefing Internal</option>
                         <option value="Sosialisasi APP Improvement">Sosialisasi APP Improvement</option>
+                        <option value="Sosialisasi Deployment S2 2026">Sosialisasi Deployment S2 2026</option>
                     </select>
                     <button type="button" onclick="loadRecentAttendance()" class="text-sm text-blue-600 hover:text-blue-800 transition-colors flex items-center whitespace-nowrap bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-lg font-medium">
                         <i class="fas fa-sync-alt mr-1"></i> Segarkan
@@ -585,7 +587,6 @@
                 document.getElementById('tanggal').value = now.toISOString().slice(0, 16);
 
                 // Memuat ulang daftar absen secara otomatis setelah 2 detik
-                // (Jeda waktu agar data sempat tersimpan di Google Sheets oleh backend)
                 setTimeout(loadRecentAttendance, 2000);
 
             } catch (error) {
