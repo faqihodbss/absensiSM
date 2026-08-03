@@ -214,7 +214,8 @@
 
         async function loadDatabasePegawai() {
             try {
-                const response = await fetch(dbUrl);
+                // Ditambahkan { cache: "no-store" } agar selalu mengambil data ter-update dari G-Sheets
+                const response = await fetch(dbUrl, { cache: "no-store" });
                 if (!response.ok) throw new Error('Gagal memuat data dari server');
                 
                 const csvText = await response.text();
